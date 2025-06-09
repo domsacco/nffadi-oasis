@@ -4,7 +4,15 @@ services:
 
 oasis:
   is_oasis: true
-  uses_central_user_management: true
+  uses_central_user_management: false 
+
+keycloak:
+  server_url: 'http://keycloak:8080/'
+  public_server_url: 'https://fis-nffadi-nomad.fisica.unimi.it/keycloak/'
+  realm_name: nomad
+  username: 'app'
+  password: 'gomugomufruit'
+  oasis: true
 
 north:
   jupyterhub_crypt_key: "978bfb2e13a8448a253c629d8dd84ff89587f30e635b753153960930cad9d36d"
@@ -15,8 +23,8 @@ north:
 
 meta:
   deployment: "oasis"
-  deployment_url: "https://my-oasis.org/api"
-  maintainer_email: "me@my-oasis.org"
+  deployment_url: "https://fis-nffadi-nomad.fisica.unimi.it/api"
+  maintainer_email: "elena.molteni@unimi.it"
 
 logstash:
   enable: false
